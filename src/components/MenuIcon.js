@@ -8,7 +8,7 @@ const MenuIcon = () => {
 
 
     if (screenHeight >= 812) {
-        topPosition = screenHeight * 0.85;
+        topPosition = screenHeight * 0.87;
     } else {
         topPosition = screenHeight * 0.95;
     }
