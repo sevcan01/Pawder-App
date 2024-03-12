@@ -1,7 +1,7 @@
 import { View, Text, FlatList, Button, Pressable, Image } from 'native-base';
 import React from 'react';
 import { StyleSheet, TouchableOpacity } from 'react-native';
-import ProductList from '../components/ProductList';
+import ProductList from '../components/product/ProductList';
 import { Trash, ArrowUp2, Minus, Add } from 'iconsax-react-native';
 import { useDispatch, useSelector } from 'react-redux';
 import { clearCart, incrementQuantity, decrementQuantity } from '../features/cart/cartSlice';

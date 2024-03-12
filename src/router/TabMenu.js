@@ -1,6 +1,6 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import HomeScreen from '../screens/HomeScreen';
-import Asistan from '../screens/Asistan';
+import Asistan from '../screens/asistan/Asistan';
 import { HomeHashtag, Category2, Headphone, ShoppingCart } from 'iconsax-react-native';
 
 import CategoriesScreen from '../screens/Categories';
@@ -11,7 +11,7 @@ import CartScreen from '../screens/CartScreen';
 
 const Tab = createBottomTabNavigator();
 
-function MyTabs() {
+function TabMenu() {
 
   const dispatch = useDispatch();
 
@@ -58,6 +58,10 @@ function MyTabs() {
 
           />
         ),
+        tabBarLabelStyle: {
+          fontWeight: 'bold',
+          fontSize: 13 // Kalın font
+        }
       }} name="Ana Sayfa" component={HomeScreen} />
       <Tab.Screen
         options={{
@@ -69,6 +73,10 @@ function MyTabs() {
 
             />
           ),
+          tabBarLabelStyle: {
+            fontWeight: 'bold',
+            fontSize: 13 // Kalın font
+          }
         }}
         name="Kategoriler" component={CategoriesScreen} />
       <Tab.Screen
@@ -76,7 +84,7 @@ function MyTabs() {
           tabBarIcon: ({ color, item }) => (
             <View>
               <ShoppingCart
-                size="32"
+                size="35"
                 color={color}
                 variant="TwoTone"
               />
@@ -86,11 +94,16 @@ function MyTabs() {
 
           tabBarLabel: ({ color, item }) => (
             <View>
-              <Text style={{ color, fontSize: 10 }}>
+              <Text style={{ color }}>
                 {getCartTotal()} {'\u20BA'}
               </Text>
             </View>
           ),
+          tabBarLabelStyle: {
+            fontWeight: 'bold',
+            fontSize: 13 // Kalın font
+          }
+
         }}
         name={'Cart'} component={CartScreen} />
       <Tab.Screen
@@ -102,26 +115,14 @@ function MyTabs() {
               variant="TwoTone"
             />
           ),
+          tabBarLabelStyle: {
+            fontWeight: 'bold',
+            fontSize: 13 // Kalın font
+          }
         }}
         name="Asistan" component={Asistan} />
     </Tab.Navigator>
   )
 }
 
-export default MyTabs;
-
-
-const styles = StyleSheet.create({
-  total: {
-    position: 'absolute',
-    top: -5,
-    right: -5,
-    backgroundColor: 'red',
-    borderRadius: 10,
-    width: 15,
-    height: 15,
-    justifyContent: 'center',
-    alignItems: 'center',
-  }
-
-})
+export default TabMenu;

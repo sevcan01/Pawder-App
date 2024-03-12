@@ -1,17 +1,10 @@
-import { StyleSheet, View } from 'react-native';
 import React from 'react';
 import {
-  VStack,
   HStack,
-
-  Icon,
   Text,
-
   Box,
   StatusBar,
   Avatar,
-  Heading,
-  Input,
 } from 'native-base';
 ('native-base');
 

@@ -1,7 +1,8 @@
-import { StyleSheet, TouchableOpacity } from 'react-native'
+import { TouchableOpacity } from 'react-native'
 import React from 'react'
 import { View, Text, FlatList, Image } from 'native-base'
 import { useSelector } from 'react-redux'
+import CategoriesStyle from './categoriesStyle'
 
 const Categories = ({ title }) => {
 
@@ -9,18 +10,18 @@ const Categories = ({ title }) => {
   const renderItem = ({ item }) => {
     return (
       <View
-        style={styles.imageContainer}>
+        style={CategoriesStyle.imageContainer}>
         <Image
           alt='image'
           source={item.photo}
-          style={styles.productImage}
+          style={CategoriesStyle.productImage}
         />
       </View>
     );
   };
   return (
     <View>
-      <Text style={styles.text} >{title}</Text>
+      <Text style={CategoriesStyle.text} >{title}</Text>
       <FlatList
         data={categories}
         keyExtractor={item => item.id.toString()}
@@ -33,24 +34,3 @@ const Categories = ({ title }) => {
 
 export default Categories
 
-const styles = StyleSheet.create({
-  imageContainer: {
-    borderWidth: 1,
-    borderColor: 'lightgray',
-    borderRadius: 10,
-    padding: 10,
-    marginHorizontal: 5
-  },
-  productImage: {
-
-    width: 80,
-    height: 80,
-
-  },
-  text: {
-    fontWeight: 'bold',
-    color: '#666',
-    marginBottom: 10,
-    marginLeft: 15
-  }
-})
