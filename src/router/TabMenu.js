@@ -8,6 +8,7 @@ import { View, Text } from 'native-base';
 import { StyleSheet } from 'react-native';
 import { useDispatch, useSelector } from 'react-redux';
 import CartScreen from '../screens/CartScreen';
+import CartBadge from '../components/cartBadge/CartBadge';
 
 const Tab = createBottomTabNavigator();
 
@@ -88,6 +89,7 @@ function TabMenu() {
                 color={color}
                 variant="TwoTone"
               />
+              <CartBadge />
 
             </View>
           ),
