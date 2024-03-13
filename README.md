@@ -12,5 +12,8 @@ This is a simple e-commerce application built with React Native, Redux Toolkit, 
 
 
 
-https://github.com/sevcan01/Pawder-App/assets/127621405/4a6a70f2-9489-4ab8-986c-b23474c9a700
+
+
+
+https://github.com/sevcan01/Pawder-App/assets/127621405/f67ce991-dfa1-4441-8a31-cfe5accd5ec3
 
