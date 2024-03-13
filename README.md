@@ -1,6 +1,6 @@
 # E-Commerce Application
 
-This is a simple e-commerce application built with React Native, Redux, and NativeBase. The main functionality includes adding and removing items from the shopping cart.
+This is a simple e-commerce application built with React Native, Redux Toolkit, and NativeBase. The main functionality includes adding and removing items from the shopping cart.
 
 ## Features
 
